@@ -1,4 +1,4 @@
-// Binary search is a O(log n) algorithm that is efficent at finding an item in an ordered dataset.
+// Binary search is a O(log n) algorithm that is efficient at finding an item in an ordered dataset.
 
 function binarySearch(arr: number[], target: number): number {
   let low = 0;
