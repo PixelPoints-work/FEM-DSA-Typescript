@@ -1,3 +1,8 @@
+// Insertion sort is a decent algorithm for small datasets and almost sorted datasets.
+// In place sorting algorithm for relying on mutation.
+// Prefer inssertion sort over bubble sort.
+// 1 half part of timsort.
+
 function insertionSort(arr: number[]): number[] {
   for (let i = 1; i < arr.length; i++) {
     let key = arr[i];
