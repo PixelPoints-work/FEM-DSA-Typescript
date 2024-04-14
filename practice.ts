@@ -8,9 +8,6 @@
 // doubly linked list from scratch. The concept is fairly simple the implementation is a bit confusing at this 09:27
 // 3/30/24 time was 10 min 36 seconds made a few mistakes just woke up . Made the mistakes due to also implementing// These algorithms in lua. My "muscle memory" was messed up. overall happy. All apart of the growing process.
 
-
-
-
 function linearSearch(arr: number[], target: number): number {
   for (let i = 0; i < arr.length; ++i) {
     if (arr[i] === target) {
@@ -20,7 +17,7 @@ function linearSearch(arr: number[], target: number): number {
   return -1;
 }
 
-function bubbleSort(arr: number[],): number[] {
+function bubbleSort(arr: number[]): number[] {
   for (let i = 0; i < arr.length - 1; ++i) {
     let swapped = false;
     for (let j = 0; j < arr.length - 1 - i; ++j) {
@@ -32,7 +29,7 @@ function bubbleSort(arr: number[],): number[] {
       }
     }
     if (!swapped) {
-      break
+      break;
     }
   }
   return arr;
@@ -56,7 +53,6 @@ function binarySearch(arr: number[], target: number): number {
   return -1;
 }
 
-
 function twoCrystalBalls(arr: boolean[]): number {
   const jumpAmount = Math.floor(Math.sqrt(arr.length));
 
@@ -67,8 +63,7 @@ function twoCrystalBalls(arr: boolean[]): number {
     }
   }
 
-
-  i -= jumpAmount
+  i -= jumpAmount;
 
   for (let j = 0; j <= jumpAmount && i < arr.length; ++j, ++i) {
     if (arr[i]) {
@@ -76,4 +71,18 @@ function twoCrystalBalls(arr: boolean[]): number {
     }
   }
   return -1;
+}
+
+function insertionSort(arr: number[]): number[] {
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i];
+    let j = i - 1;
+
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j = j - 1;
+    }
+    arr[j + 1] = key;
+  }
+  return arr;
 }
